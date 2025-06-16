@@ -2,6 +2,7 @@
 
 TODO:
 - script needs to parse an export of SL to determine what tickets already exist and who should get a model based on most occurrences
+- how can i just combine all these scripts into one and have the user select which ASM platform the vulns are coming from? This might make it easier to make changes since only 1 script is changed instead of 3 
 
 Workflow:
 1. Pull export from ASM platform
