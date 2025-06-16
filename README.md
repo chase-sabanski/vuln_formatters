@@ -34,3 +34,32 @@ Vuln Reqs
 		# I need a script that organizes that assigns a model to an analyst based on who has the most occurrences of that model in a ticket.
 		# Sl_assignment
 	> Make sure analyst list is up to date
+
+Cynerio Vuln Formatter Instructions
+1.	In Risks > List, filter by:
+a.	Status  Verified
+b.	Risk Type  Vulnerability
+c.	Device Class  IoMT
+d.	Risk Level  Critical (optional)
+2.	Pull a CSV export of the results and name it “cynerio_vulns”.
+a.	Required columns:
+i.	ID
+ii.	Name
+iii.	Description
+iv.	Model
+v.	IP
+vi.	MAC
+vii.	Vendor
+viii.	OS
+ix.	Site
+x.	CVSS
+xi.	Risk Level
+3.	In Assets > List, filter by:
+a.	Device Class  IoMT
+4.	Pull a CSV export of the results and name it “cynerio_iomt_report”.
+a.	Required columns:
+i.	Asset ID
+ii.	MAC
+5.	In a folder that only contains the cynerio_iomt_report.csv and the cynerio_vulns.csv, paste the cynerio_vuln_formatter.py script.
+6.	Double-click the python script. If successful, another file named formatted_cynerio_vulns will appear. Spot check the outputted CSV for errors before uploading to Swimlane.
+
