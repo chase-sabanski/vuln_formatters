@@ -1,5 +1,4 @@
 import os
-# import glob
 import pandas as pd
 from datetime import datetime
 from collections import Counter
