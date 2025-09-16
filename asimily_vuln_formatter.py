@@ -99,8 +99,8 @@ vuln_report.dropna(subset=["CVE & Model"], inplace=True)
 # De-duplicate df based on the CVE & Model column
 vuln_report = vuln_report.drop_duplicates(subset=["CVE & Model"])
 
-# create model assignment dictionary (TODO include input about how many tickets each analyst has before the rest of the script is run)
-analysts = ["Dawood Shaikh", "Muhammad Usman", "Bazil Arif", "Saad Sheikh", "Zain Abdeen", "Mubashir Hussain", "Uzair Khan"]
+# analysts are populated from a separate csv that is easier to maintain
+analysts = []
 
 # pull all device models into a list
 raw_models = vuln_report["Device Model"].tolist()
