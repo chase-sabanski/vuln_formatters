@@ -114,7 +114,8 @@ vuln_report = vuln_report.drop_duplicates(subset=["CVE & Model"])
 
 # create model assignment dictionary (TODO include input about how many tickets each analyst has before the rest of the script is run, that way it can put the analyst with the least amount of tickets in the first spot and so on)
 # this should be a separate csv that can be referenced for the other scripts that need a list of analysts, that way I only need to update one list for all scripts
-analysts = ["Katie Paz", "Uzair Khan", "Muhammad Usman", "Zain Abdeen", "Dawood Shaikh", "Saad Sheikh"]
+# analysts are populated from a separate csv that is easier to maintain
+analysts = []
 
 # pull all device models into a list
 raw_models = vuln_report["Model"].tolist()
