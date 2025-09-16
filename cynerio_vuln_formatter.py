@@ -108,9 +108,8 @@ cynerio_report.dropna(subset=["CVE & Model"], inplace=True)
 # De-duplicate df based on the CVE & Model column
 cynerio_report = cynerio_report.drop_duplicates(subset=["CVE & Model"])
 
-# create model assignment dictionary (TODO include input about how many tickets each analyst has before the rest of the script is run, that way it can put the analyst with the least amount of tickets in the first spot and so on)
-# this should be a separate csv that can be referenced for the other scripts that need a list of analysts, that way I only need to update one list for all scripts
-analysts = ["Zarrar Ahmed", "Yasir Zubair", "Muhammad Usman", "Bazil Arif", "Dawood Shaikh", "Saad Sheikh", "Zain Abdeen", "Mubashir Hussain", "Uzair Khan"]
+# analysts are populated from a separate csv that is easier to maintain
+analysts = []
 
 # pull all device models into a list
 raw_models = cynerio_report["Model"].tolist()
